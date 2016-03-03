@@ -1,0 +1,15 @@
+{
+  "name": "previousnext/kss-node-offscreen-template",
+  "type": "library",
+  "description": "A kss-node template with offscreen menu.",
+  "homepage": "https://github.com/previousnext/kss-node-offscreen-template",
+  "support": {
+    "issues": "https://github.com/previousnext/kss-node-offscreen-template",
+    "source": "https://github.com/previousnext/kss-node-offscreen-template"
+  },
+  "keywords": [
+    "kss",
+    "kss-node",
+    "template"
+  ]
+}
