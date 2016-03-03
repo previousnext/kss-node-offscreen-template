@@ -1,2 +1,14 @@
-# kss-node-offscreen-template
-A kss-node template with offscreen menu
+# Template for kss-node with offscreen menu
+
+This is a **template** for [kss-node](https://github.com/kss-node/kss-node) living styleguide. It feature a toggle-able sidebar menu so you can choose to see the styleguide at full browser width.
+
+## How to apply this template
+
+1. Install kss-node. Type `npm install kss` or `npm install -g kss` for global CLI.
+2. Download [kss-node-offscreen-template](https://github.com/previousnext/kss-node-offscreen-template/archive/master.zip) and copy the "template" folder into your working directory.
+3. Run `kss-node` command with `--template` option, like below.
+
+```
+kss-node <sourcedir> --template path/to/template
+```
+
