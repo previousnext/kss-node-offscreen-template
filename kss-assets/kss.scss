@@ -1,49 +1,45 @@
 // ------------------------------------------------------------------------------
-//   @group Variables - Colors, Fonts, etc.
+//   Variables - Colors, Fonts, etc.
 // ------------------------------------------------------------------------------
-@kss-colors-background     : #fff;
+$kss-colors-background    : #fff;
 
-@kss-colors-foreground     : #444;
-@kss-colors-heading        : #111;
-@kss-colors-quotes         : #666;
+$kss-colors-foreground    : #444;
+$kss-colors-heading       : #111;
+$kss-colors-quotes        : #666;
+$kss-colors-sidebar       : #ecf1f3;
+$kss-colors-border        : #c4d0d6;
 
-@kss-colors-link           : #111;
-@kss-colors-link-visited   : #111;
-@kss-colors-link-hover     : lighten(#0645ad, 20%);
-@kss-colors-link-active    : #faa700;
+$kss-colors-link          : #0645ad;
+$kss-colors-link-visited  : #0645ad;
+$kss-colors-link-hover    : lighten($kss-colors-link, 20%);
+$kss-colors-link-active   : #faa700;
 
-@kss-font-body             : Helvetica, 'Helvetica Neue', Arial, sans-serif;
-@kss-font-code             : Menlo, 'Ubuntu Mono', 'Lucida Console', 'Courier New', Courier, monospace;
+$kss-font-body            : Helvetica, 'Helvetica Neue', Arial, sans-serif;
+$kss-font-code            : Menlo, 'Ubuntu Mono', 'Lucida Console', 'Courier New', Courier, monospace;
 
-@kss-font-size             : 16px;
-@kss-vertical-rhythm       : @kss-font-size * 1.5;
-
-@kss-large                 : 999px;
+$kss-font-size            : 16px;
+$kss-vertical-rhythm      : $kss-font-size * 1.5;
 
 // ------------------------------------------------------------------------------
-// Wrap all of this template's base HTML styling inside a .kss-style selector.
+// Wrap all of this builder's base HTML styling inside a .kss-style selector.
 // ------------------------------------------------------------------------------
 
 .kss-style {
-  color: @kss-colors-foreground;
-  font-family: @kss-font-body;
-  font-size: @kss-font-size;
-  line-height: @kss-vertical-rhythm;
-  -ms-text-size-adjust:100%;
-  -webkit-text-size-adjust:100%;
+  color: $kss-colors-foreground;
+  font-family: $kss-font-body;
+  font-size: $kss-font-size;
+  line-height: $kss-vertical-rhythm;
 
-  :link,
   a {
-    color: @kss-colors-link;
-    font-weight: normal;
+    color: $kss-colors-link;
     text-decoration: none;
     transition-property: color;
     transition-duration: 0.5s;
 
-    &:visited { color: @kss-colors-link-visited; }
+    &:visited { color: $kss-colors-link-visited; }
     &:hover,
-    &:focus   { color: @kss-colors-link-hover;   }
-    &:active  { color: @kss-colors-link-active;  }
+    &:focus   { color: $kss-colors-link-hover;   }
+    &:active  { color: $kss-colors-link-active;  }
 
     &:hover,
     &:active {
@@ -52,51 +48,45 @@
   }
 
   p {
-    margin: (@kss-vertical-rhythm/2) 0 @kss-vertical-rhythm 0;
+    margin: ($kss-vertical-rhythm/2) 0 $kss-vertical-rhythm 0;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    margin: @kss-vertical-rhythm 0 0 0;
-    font-family: @kss-font-body;
-    color: @kss-colors-heading;
+    margin: $kss-vertical-rhythm 0 0 0;
+    font-family: $kss-font-body;
+    color: $kss-colors-heading;
     line-height: 1.15em;
     font-weight: bold;
-
-    a,
-    :link {
-      color: @kss-colors-heading;
-      font-weight: bold;
-    }
   }
 
-  h1 { font-size: @kss-font-size * 2.5;   }
-  h2 { font-size: @kss-font-size * 2.25;  }
-  h3 { font-size: @kss-font-size * 2.125; }
-  h4 { font-size: @kss-font-size * 2;     }
-  h5 { font-size: @kss-font-size * 1.875; }
-  h6 { font-size: @kss-font-size * 1.75;  }
+  h1 { font-size: $kss-font-size * 2.5;   }
+  h2 { font-size: $kss-font-size * 2.25;  }
+  h3 { font-size: $kss-font-size * 2.125; }
+  h4 { font-size: $kss-font-size * 2;     }
+  h5 { font-size: $kss-font-size * 1.875; }
+  h6 { font-size: $kss-font-size * 1.75;  }
 
   blockquote {
-    color: @kss-colors-quotes;
+    color: $kss-colors-quotes;
     margin: 0;
-    padding-left: @kss-vertical-rhythm;
-    border-left: 0.5em mix(@kss-colors-quotes, @kss-colors-background, 25%) solid;
+    padding-left: $kss-vertical-rhythm;
+    border-left: 0.5em mix($kss-colors-quotes, $kss-colors-background, 25%) solid;
   }
 
   hr {
     display: block;
     height: 2px;
     border: 0;
-    border-top: 1px solid lighten(@kss-colors-foreground, 60%);
-    border-bottom: 1px solid darken(@kss-colors-background, 10%);
-    margin: @kss-vertical-rhythm 0;
+    border-top: 1px solid lighten($kss-colors-foreground, 60%);
+    border-bottom: 1px solid darken($kss-colors-background, 10%);
+    margin: $kss-vertical-rhythm 0;
     padding: 0;
   }
 
   pre, code, kbd, samp {
-    font-family: @kss-font-code;
-    color: mix(@kss-colors-foreground, @kss-colors-heading, 50%);
-    font-size: 14px;
+    font-family: $kss-font-code;
+    color: mix($kss-colors-foreground, $kss-colors-heading, 50%);
+    font-size: 1em;
   }
 
   pre {
@@ -105,13 +95,13 @@
   }
 
   ins {
-    color: @kss-colors-heading;
+    color: $kss-colors-heading;
     background: #ff9;
     text-decoration: none;
   }
 
   mark {
-    color: @kss-colors-heading;
+    color: $kss-colors-heading;
     background: #ff0;
     font-weight: bold;
   }
@@ -126,14 +116,14 @@
   sub { bottom: -0.25em; }
 
   ul, ol {
-    margin: @kss-vertical-rhythm 0;
-    padding: 0 0 0 @kss-vertical-rhythm;
+    margin: $kss-vertical-rhythm 0;
+    padding: 0 0 0 $kss-vertical-rhythm;
   }
   li p:last-child {
     margin: 0;
   }
   dd {
-    margin: 0 0 0 @kss-vertical-rhythm;
+    margin: 0 0 0 $kss-vertical-rhythm;
   }
 
   img {
@@ -191,19 +181,18 @@
 
   .kss-main {
     margin: 0;
-    padding: 80px 20px 20px;
+    padding: 20px 20px 20px;
   }
 
   .kss-sidebar {
     height: 100%;
     overflow: auto;
     padding: 80px 20px 20px;
-    background-color: #eee;
-    background-image: url(noise-low.png);
-    border-right: 1px solid #ccc;
+    background-color: $kss-colors-sidebar;
     box-sizing: border-box;
   }
 }
+
 
 // ------------------------------------------------------------------------------
 // Offscreen components
@@ -231,11 +220,7 @@
     overflow-x: hidden;
     overflow-y: auto;
     z-index: 1001;
-    width: 80%;
-
-    @media screen and (min-width: 607px) {
-      width: 20%;
-    }
+    width: 290px;
   }
 
   .kss-offscreen__toggle {
@@ -251,7 +236,7 @@
     white-space: nowrap;
     overflow: hidden;
     background-repeat: no-repeat;
-    background-image: url('toggle-icon.svg');
+    background-image: url(toggle-icon.svg);
   }
   .kss-offscreen__toggle.is-active {
     background-position: 100% 0;
@@ -263,13 +248,9 @@
   -webkit-overflow-scrolling: touch;
 
   .kss-offscreen__inner {
-    left: 80%;
+    margin-left: 290px;
     overflow: visible;
-
-    @media screen and (min-width: 607px) {
-      left: 20%;
-      width: 80%;
-    }
+    width: auto;
   }
 
   .kss-offscreen__item {
@@ -285,34 +266,79 @@
 
   .kss-doc-title {
     margin: 0;
+    font-weight: 500;
+
+    @media screen and (min-width: 769px) {
+      font-size: 1.5em;
+      line-height: 24px;
+    }
+  }
+
+  .kss-nav {
+    font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
   }
 
   .kss-nav__menu {
-    margin-top: (@kss-vertical-rhythm/2);
-    margin-bottom: (@kss-vertical-rhythm/2);
+    margin-top: ($kss-vertical-rhythm/2);
+    margin-bottom: ($kss-vertical-rhythm/2);
     padding: 0;
     list-style-type: none;
   }
 
   .kss-nav__menu-item {
-    display: list-item;
+    display: inline-block;
     padding: 2px 0;
+    margin: 0 0 .3125rem;
+
+    @media screen and (min-width: 769px) {
+      display: list-item;
+    }
+
+    a {
+      color: $kss-colors-foreground;
+      text-decoration: none;
+
+      &:focus,
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .kss-nav__menu-link {
+    position: relative;
+    display: block;
+
+    &.is-in-viewport {
+      color: $kss-colors-link;
+    }
   }
 
   .kss-nav__menu-child {
-    display: block;
-    list-style-type: none;
-    margin: 10px 0;
-    padding: 10px 0;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+    display: none;
+
+    @media screen and (min-width: 769px) {
+      display: block;
+      list-style-type: none;
+      margin: 5px 0 0 15px;
+      padding: 0;
+      font-size: .875em;
+    }
+  }
+
+  .kss-nav__menu-subchild {
+    margin-left: 15px;
   }
 
   .kss-nav__ref {
     color: #333;
     font-weight: bold;
-    display: inline-block;
-    margin-right: 10px;
+    float: right;
+    margin-left: 10px;
+
+    &:after {
+      content: ' ';
+    }
   }
   .kss-nav__ref-child {
     font-weight: normal;
@@ -326,7 +352,8 @@
 #kss-node {
 
   .kss-section {
-    margin-bottom: (@kss-vertical-rhythm * 2);
+    max-width: 1400px;
+    padding-top: ($kss-vertical-rhythm * 2);
   }
 
   .kss-title {
@@ -335,12 +362,49 @@
   .kss-title__ref {
     color: #ccc;
   }
+  .kss-title__permalink {
+    display: block;
+    color: #000;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $kss-colors-link;
+
+      @media screen and (min-width: 607px) {
+        .kss-title__permalink-hash {
+          display: inline;
+        }
+      }
+    }
+  }
+  .kss-title__permalink-hash {
+    display: none;
+    color: #ccc;
+  }
+
+  .kss-title--level-1 {
+    font-size: 34px;
+  }
+
+  .kss-title--level-2 {
+    font-size: 28px;
+  }
+
+  .kss-title--level-3 {
+    font-size: 24px;
+  }
 
   .kss-parameters {
     display: table;
     list-style-type: none;
+    margin-top: 0;
     margin-left: 0;
     padding-left: 0;
+  }
+  .kss-parameters__title {
+    font-weight: bold;
   }
   .kss-parameters__item {
     display: table-row;
@@ -348,25 +412,30 @@
   .kss-parameters__name {
     display: table-cell;
     padding-right: 20px;
+    white-space: nowrap;
   }
   .kss-parameters__description {
     display: table-cell;
   }
+  .kss-parameters__default-value code {
+    white-space: nowrap;
+  }
 
   .kss-modifier__wrapper {
-    border: 1px solid #ccc;
-    padding: 10px;
+    border: 1px solid $kss-colors-sidebar;
+    padding: 20px;
   }
   .kss-modifier__heading {
-    margin: -10px -10px 10px -10px;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-    background-color: #eee;
+    text-shadow: 1px 1px 1px #FFF;
+    margin: -20px -20px 20px -20px;
+    padding: 10px 10px 10px 20px;
+    background-color: $kss-colors-sidebar;
+    color: $kss-colors-foreground;
     font-weight: bold;
   }
   .kss-modifier__default-name {
     font-weight: bold;
-    margin-bottom: (@kss-vertical-rhythm / 2);
+    margin-bottom: ($kss-vertical-rhythm / 2);
   }
   .kss-modifier__name {
     float: left;
@@ -374,14 +443,14 @@
     font-weight: bold;
   }
   .kss-modifier__description {
-    margin-bottom: (@kss-vertical-rhythm / 2);
+    margin-bottom: ($kss-vertical-rhythm / 2);
   }
   .kss-modifier__example {
     clear: left;
-    overflow: hidden;
     padding: 1px 0; // Contain the example's margins.
     position: relative; // Contain the example's absolute positioning.
-    margin: 0 0 (@kss-vertical-rhythm - 1px) 0;
+    margin: 0 0 ($kss-vertical-rhythm - 1px) 0;
+    overflow: visible;
 
     &:last-child {
       margin: 0;
@@ -389,11 +458,24 @@
   }
 
   .kss-markup {
-    margin: -1px 0 @kss-vertical-rhythm 0;
-    border: 1px solid #999;
+    margin: 20px 0 $kss-vertical-rhythm 0;
+    border: 1px solid $kss-colors-sidebar;
   }
   .kss-markup pre {
     margin: 0;
+  }
+
+  .kss-source {
+    font-size: 80%;
+  }
+
+  .kss-description {
+    pre,
+    kbd,
+    samp,
+    code {
+      background-color: $kss-colors-sidebar;
+    }
   }
 
   .kss-github {
@@ -412,7 +494,7 @@
   }
 
   // ------------------------------------------------------------------------------
-  //   @group prettyprint.js styling
+  //   group prettyprint.js styling
   // ------------------------------------------------------------------------------
   /* Pretty printing styles. Used with prettify.js. */
 
@@ -452,7 +534,7 @@
     list-style-type: none;
 
     li {
-      min-height: @kss-vertical-rhythm;
+      min-height: $kss-vertical-rhythm;
       border-bottom: 1px solid #eee;
       padding: 0 10px;
       background: #fff;
