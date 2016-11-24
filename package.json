@@ -3,7 +3,7 @@
   "author": "PreviousNext",
   "license": "UNLICENSED",
   "version": "3.0.0",
-  "description": "A custom handlebars buidler for KSS node with an offscreen menu.",
+  "description": "A custom handlebars buidler for KSS node with an offscreen menu and search.",
   "main": "builder.js",
   "repository": {
     "type": "git",

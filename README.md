@@ -2,7 +2,7 @@
 
 **Requires KKS-node 3.0.x**
 
-This is a **builder** for [kss-node](https://github.com/kss-node/kss-node) living styleguide. It feature a toggle-able sidebar menu so you can choose to see the styleguide at full browser width.
+This is a **builder** for [kss-node](https://github.com/kss-node/kss-node) living styleguide. It feature a toggle-able sidebar menu so you can choose to see the styleguide at full browser width. It also has a search function to easily find your component.
 
 ## How to apply this builder
 

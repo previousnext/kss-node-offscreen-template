@@ -1,7 +1,7 @@
 {
   "name": "previousnext/kss-node-offscreen-template",
   "type": "library",
-  "description": "A kss-node handlebars builder with offscreen menu.",
+  "description": "A kss-node handlebars builder with offscreen menu and search.",
   "homepage": "https://github.com/previousnext/kss-node-offscreen-template",
   "support": {
     "issues": "https://github.com/previousnext/kss-node-offscreen-template",

@@ -156,6 +156,17 @@
   {{/each}}
 {{/if}}
 </article>
+
+
+<ul id="kss-toc" style="display: none;">
+  {{#each menu}}
+    <li data-url="/section-{{referenceURI}}.html#kssref-{{referenceURI}}" data-name="{{header}}"></li>
+    {{#each children}}
+      <li data-url="/section-{{../referenceURI}}.html#kssref-{{referenceURI}}" data-name="{{header}}"></li>
+    {{/each}}
+  {{/each}}
+</ul>
+
 </div>
 
 <!-- SCRIPTS -->
@@ -163,7 +174,9 @@
 <script src="kss-assets/scrollspy.js"></script>
 <script src="kss-assets/prettify.js"></script>
 <script src="kss-assets/jquery.min.js"></script>
+<script src="kss-assets/jquery.easy-autocomplete.min.js"></script>
 <script src="kss-assets/offscreen.js"></script>
+<script src="kss-assets/search.js"></script>
 <script>
   prettyPrint();
   var spy = new ScrollSpy('#kss-node', {
@@ -180,5 +193,6 @@
     <a href="https://github.com/previousnext/kss-node-offscreen-template"><img src="kss-assets/github-fork--black.png" alt="Fork me on GitHub"></a>
   </footer>
 {{/if}}
+
 </body>
 </html>

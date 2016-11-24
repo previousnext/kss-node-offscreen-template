@@ -345,6 +345,68 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
   }
 }
 
+.kss-search {
+  font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
+  margin-bottom: 20px;
+
+  input {
+    width: 100%;
+    background: $kss-colors-background;
+    border: 2px solid $kss-colors-border;
+    color: $kss-colors-foreground;
+    border-radius: 6px;
+    padding: 0 .625rem 0 .3125rem;
+    height: 2.75rem;
+    text-indent: .3125rem;
+    font-size: 1.125rem;
+
+    &:focus {
+      border-color: $kss-colors-border;
+    }
+  }
+
+  .easy-autocomplete {
+    position: relative;
+  }
+
+  .easy-autocomplete-container {
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+
+    ul {
+      background: lighten($kss-colors-sidebar, 5%);
+      border-width: 2px;
+      border-style: solid;
+      border-color: $kss-colors-border;
+      border-bottom-right-radius: 6px;
+      border-bottom-left-radius: 6px;
+      margin: -4px 0 0;
+      padding: 6px 0 0;
+      list-style: none;
+      position: relative;
+      display: none;
+    }
+
+    a {
+      color: $kss-colors-foreground;
+      text-decoration: none;
+      padding: 4px 12px;
+      display: block;
+
+      &:hover,
+      &:focus {
+        color: $kss-colors-link-hover;
+      }
+    }
+
+    b {
+      font-weight: bold;
+    }
+  }
+}
+
 // ------------------------------------------------------------------------------
 // Content-area components
 // ------------------------------------------------------------------------------
