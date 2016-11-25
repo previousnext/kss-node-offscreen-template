@@ -177,6 +177,7 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
     padding-left: 40px;
     color: #fff;
     font-size: 25px;
+    font-weight: bold;
   }
 
   .kss-main {
@@ -348,9 +349,10 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
 .kss-search {
   font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
   margin-bottom: 20px;
+  position: relative;
 
   input {
-    width: 100%;
+    width: 250px;
     background: $kss-colors-background;
     border: 2px solid $kss-colors-border;
     color: $kss-colors-foreground;
