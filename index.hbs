@@ -160,9 +160,9 @@
 
 <ul id="kss-toc" style="display: none;">
   {{#each menu}}
-    <li data-url="/section-{{referenceURI}}.html#kssref-{{referenceURI}}" data-name="{{header}}"></li>
+    <li data-url="./section-{{referenceURI}}.html#kssref-{{referenceURI}}" data-name="{{header}}"></li>
     {{#each children}}
-      <li data-url="/section-{{../referenceURI}}.html#kssref-{{referenceURI}}" data-name="{{header}}"></li>
+      <li data-url="./section-{{../referenceURI}}.html#kssref-{{referenceURI}}" data-name="{{header}}"></li>
     {{/each}}
   {{/each}}
 </ul>
