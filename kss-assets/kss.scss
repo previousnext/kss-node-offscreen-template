@@ -178,8 +178,10 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
   .kss-doc-title {
     padding-left: 40px;
     color: #fff;
-    font-size: 25px;
+    font-size: 1.5em;
+    line-height: 24px;
     font-weight: bold;
+    margin: 0;
   }
 
   .kss-main {
@@ -206,7 +208,7 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
   width: 100%;
 
   .kss-offscreen__inner {
-    transition: all .3s ease;
+    transition: margin .3s ease;
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -216,6 +218,7 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
     backface-visibility: hidden;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
+    transition: left .3s ease;
     top: 0;
     bottom: 0;
     left: -100%;
@@ -256,7 +259,10 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
   .kss-offscreen__inner {
     margin-left: 290px;
     overflow: visible;
-    width: auto;
+
+    @media screen and (min-width: 769px) {
+      width: auto;
+    }
   }
 
   .kss-offscreen__item {
@@ -270,16 +276,6 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
 
 #kss-node {
 
-  .kss-doc-title {
-    margin: 0;
-    font-weight: 500;
-
-    @media screen and (min-width: 769px) {
-      font-size: 1.5em;
-      line-height: 24px;
-    }
-  }
-
   .kss-nav {
     font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
   }
@@ -292,13 +288,9 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
   }
 
   .kss-nav__menu-item {
-    display: inline-block;
+    display: list-item;
     padding: 2px 0;
     margin: 0 0 .3125rem;
-
-    @media screen and (min-width: 769px) {
-      display: list-item;
-    }
 
     a {
       color: $kss-colors-foreground;
@@ -321,15 +313,10 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
   }
 
   .kss-nav__menu-child {
-    display: none;
-
-    @media screen and (min-width: 769px) {
-      display: block;
-      list-style-type: none;
-      margin: 5px 0 0 15px;
-      padding: 0;
-      font-size: .875em;
-    }
+    list-style-type: none;
+    margin: 5px 0 0 15px;
+    padding: 0;
+    font-size: .875em;
   }
 
   .kss-nav__menu-subchild {
@@ -368,7 +355,9 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
     text-indent: .3125rem;
     font-size: 1.125rem;
 
+    &:hover,
     &:focus {
+      background: $kss-colors-background;
       border-color: $kss-colors-border;
     }
   }
@@ -540,6 +529,8 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
   }
 
   .kss-description {
+    max-width: 50rem;
+
     pre,
     kbd,
     samp,
