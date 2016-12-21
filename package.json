@@ -2,7 +2,7 @@
   "name": "kss-node-offscreen-template",
   "author": "PreviousNext",
   "license": "(MIT OR GPL-2.0)",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "A custom handlebars buidler for KSS node with an offscreen menu and search.",
   "main": "builder.js",
   "repository": {
